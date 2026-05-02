@@ -23,6 +23,8 @@ export const verifyPassword = (mobileNo: string, transactionHash: string, inputP
   const timestampStr = parts[0];
   const timestamp = parseInt(timestampStr, 10);
   
+  if (isNaN(timestamp)) return false;
+
   // 5 minutes expiry
   if (Date.now() - timestamp > 5 * 60 * 1000) {
     return false; // Expired

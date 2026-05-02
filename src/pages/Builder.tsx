@@ -1562,4 +1562,21 @@ const Builder: React.FC = () => {
               <button
                 onClick={() => {
                   dispatch({
-                    typ
+                    type: 'MERGE_PARSED_DATA',
+                    payload: pendingTailoredResume as any,
+                  });
+                  setPendingTailoredResume(null);
+                }}
+                className="flex-[1.5] rounded-[1.6rem] bg-primary px-5 py-4 text-xs font-black uppercase tracking-[0.28em] text-white shadow-xl shadow-blue-200 transition hover:bg-blue-700"
+              >
+                Apply Tailored Update
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Builder;
