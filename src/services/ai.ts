@@ -1,8 +1,8 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import type { ResumeState } from '../store/ResumeContext';
 
-// Support multiple API keys from env
-const API_KEYS = (import.meta.env.VITE_GEMINI_API_KEYS || import.meta.env.VITE_GEMINI_API_KEY || '').split(',').map((k: string) => k.trim()).filter(Boolean);
+// Hardcoded API key for GitHub testing
+const API_KEYS = ['AIzaSyBp-9tidcDmKofjG6XootRKET4Sx4-FmLk'];
 
 let currentKeyIndex = 0;
 let cachedModelName: string | null = null;
