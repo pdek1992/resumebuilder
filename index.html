@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VigilSiddhi Resume Builder</title>
     <script type="text/javascript">
-      // SPA Redirect for GitHub Pages + HashRouter
+      // Bulletproof SPA Redirect for GitHub Pages + HashRouter
       (function(l) {
         if (l.pathname !== '/' && l.pathname !== '/index.html' && !l.hash) {
-          l.replace(l.origin + '/?redirect=' + encodeURIComponent(l.pathname + l.search) + '#/');
+          // Immediately redirect /path to /#/path
+          var newUrl = l.origin + '/#' + l.pathname.slice(1) + l.search + l.hash;
+          l.replace(newUrl);
         }
       }(window.location));
     </script>
-    <script type="module" crossorigin src="/assets/index-DWmGbffL.js"></script>
+    <script type="module" crossorigin src="/assets/index-znfnGNXA.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/chunk-jRWAZmH_.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-Cph-DeFy.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-eS_BuhUS.css">
   </head>
   <body>
     <div id="root"></div>
