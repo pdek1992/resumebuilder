@@ -28,25 +28,30 @@ import{o as e}from"./chunk-jRWAZmH_.js";import{t}from"./crypto-js-jmqojIBH.js";v
         
         The JSON object MUST follow this schema:
         {
-          "personalInfo": { "fullName": "", "email": "", "phone": "", "location": "", "linkedin": "", "portfolio": "" },
+          "personalInfo": { "fullName": "", "email": "", "phone": "", "location": "", "linkedin": "", "github": "", "portfolio": "" },
           "summary": "",
           "skills": [],
-          "languages": [],
+          "languages": [{ "id": "unique_id", "title": "English", "description": "Native" }],
           "experience": [
-            { "id": "unique_id", "company": "", "role": "", "startDate": "", "endDate": "", "isCurrent": false, "description": "Bullet 1\\nBullet 2" }
+            { "id": "unique_id", "company": "", "role": "", "startDate": "", "endDate": "", "isCurrent": false, "description": "• Bullet 1\\n• Bullet 2" }
           ],
           "education": [
             { "id": "unique_id", "institution": "", "degree": "", "startDate": "", "endDate": "", "score": "" }
           ],
           "projects": [
-            { "id": "unique_id", "name": "", "description": "• Built X\\n• Used Y", "link": "" }
+            { "id": "unique_id", "name": "", "description": "• Bullet 1\\n• Bullet 2", "link": "" }
           ],
           "certifications": [
             { "id": "unique_id", "name": "", "issuer": "", "date": "" }
-          ]
+          ],
+          "achievements": [{ "id": "unique_id", "title": "", "description": "• Bullet 1" }],
+          "publications": [{ "id": "unique_id", "title": "", "description": "• Bullet 1" }],
+          "volunteer": [{ "id": "unique_id", "title": "", "description": "• Bullet 1" }],
+          "extracurricular": [{ "id": "unique_id", "title": "", "description": "• Bullet 1" }],
+          "patents": [{ "id": "unique_id", "title": "", "description": "• Bullet 1" }]
         }
         
-        CRITICAL: All 'description' fields in experience and projects MUST be formatted as multiple lines, each starting with the bullet symbol (• ).
+        CRITICAL: All 'description' fields MUST be formatted as multiple lines, each starting with the bullet symbol (• ).
 
         Raw Resume Text:
         """
