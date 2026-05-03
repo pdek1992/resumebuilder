@@ -9,13 +9,12 @@
       // Bulletproof SPA Redirect for GitHub Pages + HashRouter
       (function(l) {
         if (l.pathname !== '/' && l.pathname !== '/index.html' && !l.hash) {
-          // Immediately redirect /path to /#/path
-          var newUrl = l.origin + '/#' + l.pathname.slice(1) + l.search + l.hash;
+          var newUrl = l.origin + '/#/' + l.pathname.substring(1) + l.search + l.hash;
           l.replace(newUrl);
         }
       }(window.location));
     </script>
-    <script type="module" crossorigin src="/assets/index-znfnGNXA.js"></script>
+    <script type="module" crossorigin src="/assets/index-Dp15MY_T.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/chunk-jRWAZmH_.js">
     <link rel="stylesheet" crossorigin href="/assets/index-eS_BuhUS.css">
   </head>
