@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import ConsentModal from '@/components/ConsentModal';
+import AuthForm from '@/components/AuthForm';
 import { supabase } from '@/lib/supabase';
 import { FileText, Download, Wand2, MessageSquare } from 'lucide-react';
 
@@ -18,18 +19,12 @@ export default function BuilderPage() {
     getUser();
   }, []);
 
-  if (loading) return <div className="flex items-center justify-center min-h-screen font-bold">Loading Editor...</div>;
+  if (loading) return <div className="flex items-center justify-center min-h-screen font-bold text-slate-400 animate-pulse">Loading Editor...</div>;
 
   if (!user) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen space-y-4">
-        <h1 className="text-2xl font-bold">Please sign in to build your resume</h1>
-        <button 
-          onClick={() => supabase.auth.signInWithOAuth({ provider: 'google' })}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg font-bold shadow-lg"
-        >
-          Sign in with Google
-        </button>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 p-6">
+        <AuthForm />
       </div>
     );
   }
