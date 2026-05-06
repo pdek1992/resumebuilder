@@ -43,7 +43,8 @@ CREATE TABLE users (
     consent_timestamp TIMESTAMPTZ,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW(),
-    last_login TIMESTAMPTZ DEFAULT NOW()
+    last_login TIMESTAMPTZ DEFAULT NOW(),
+    is_admin BOOLEAN DEFAULT FALSE
 );
 
 -- Trigger to lock full_name after first save

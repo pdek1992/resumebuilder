@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import { Mail, Phone, Lock, Chrome, Loader2 } from 'lucide-react';
+import { Mail, Phone, Lock, Globe, Loader2 } from 'lucide-react';
 
 export default function AuthForm() {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin');
@@ -150,7 +150,7 @@ export default function AuthForm() {
         onClick={handleGoogle}
         className="w-full py-3 border-2 border-slate-200 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-slate-50 transition-all"
       >
-        <Chrome className="w-5 h-5 text-blue-500" />
+        <Globe className="w-5 h-5 text-blue-500" />
         Google SSO
       </button>
 
