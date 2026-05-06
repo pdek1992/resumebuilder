@@ -1,4 +1,4 @@
-import { supabaseAdmin } from './supabase';
+import { supabaseAdmin } from './supabase-admin';
 import { headers } from 'next/headers';
 
 export async function logAction(userId: string, actionType: string) {

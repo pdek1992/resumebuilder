@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { generateContent } from '@/lib/ai';
 import { logAction } from '@/lib/logger';
-import { supabaseAdmin } from '@/lib/supabase';
+import { supabaseAdmin } from '@/lib/supabase-admin';
 
 export async function POST(req: Request) {
   try {
