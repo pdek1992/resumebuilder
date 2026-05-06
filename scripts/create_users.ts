@@ -5,7 +5,7 @@ async function createInitialUsers() {
 
   // 1. Create pdektest user
   const { data: user1, error: error1 } = await supabaseAdmin.auth.admin.createUser({
-    email: 'pdektest@example.com',
+    email: 'pdektest',
     password: 'pdektest',
     email_confirm: true
   });
@@ -18,7 +18,7 @@ async function createInitialUsers() {
 
   // 2. Create admin user
   const { data: user2, error: error2 } = await supabaseAdmin.auth.admin.createUser({
-    email: 'admin@example.com',
+    email: 'pdek1991@gmail.com',
     password: 'Pdek%1991',
     email_confirm: true,
     user_metadata: { is_admin: true }

@@ -18,11 +18,21 @@ export default function AuthForm() {
     setLoading(true);
     setMessage('');
 
+    const redirectUrl = `${window.location.origin}/builder`;
+
     try {
       if (mode === 'signup') {
         const { error } = method === 'email' 
-          ? await supabase.auth.signUp({ email, password })
-          : await supabase.auth.signUp({ phone, password });
+          ? await supabase.auth.signUp({ 
+              email, 
+              password,
+              options: { emailRedirectTo: redirectUrl }
+            })
+          : await supabase.auth.signUp({ 
+              phone, 
+              password,
+              options: { emailRedirectTo: redirectUrl } // Also for phone if needed
+            });
         
         if (error) throw error;
         setMessage('Check your email/phone for verification!');
@@ -32,7 +42,7 @@ export default function AuthForm() {
           : await supabase.auth.signInWithPassword({ phone, password });
         
         if (error) throw error;
-        window.location.reload(); // Refresh to update user state
+        window.location.reload(); 
       }
     } catch (error: any) {
       setMessage(error.message);
